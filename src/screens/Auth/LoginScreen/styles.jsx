@@ -32,7 +32,7 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     width: wp(100),
     paddingTop: hp(3),
-    paddingHorizontal: wp(2),
+    paddingHorizontal: wp(3),
   },
   desc: {
     fontSize: RFValue(15),

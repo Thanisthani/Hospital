@@ -2,6 +2,7 @@ import { View, Text, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { styles } from './styles'
 import app from '../../../../assets/images/app.png'
+import SignInWithOAuth from '../../../components/signInWithOAuth'
 
 export default function LoginScreen() {
   return (
@@ -13,9 +14,7 @@ export default function LoginScreen() {
         <Text style={styles.desc}>
           Book appointments effortlessly and manage your health journey
         </Text>
-        <TouchableOpacity style={styles.btn} onPress={console.log('Login')}>
-          <Text style={styles.btnText}>Login With Gooogle</Text>
-        </TouchableOpacity>
+        <SignInWithOAuth />
       </View>
     </View>
   )

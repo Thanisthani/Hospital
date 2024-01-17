@@ -1,7 +1,7 @@
 export const colorSheet = {
   black: '#000',
   white: '#fff',
-  bgColor: '#F4F5F6',
+  bgColor: '#F5F3F9',
   primary1: '#261863',
   primary2: '#D975BB',
   secondary1: '#747384',
