@@ -1,15 +1,14 @@
-import { StatusBar } from 'expo-status-bar'
-import { SafeAreaView, StyleSheet, Text, View } from 'react-native'
+import { SafeAreaView } from 'react-native'
 import LoginScreen from './src/screens/Auth/LoginScreen'
 import { colorSheet } from './src/ColorSheet'
 import {
   useFonts,
-  Poppins_500Medium,
-  Poppins_400Regular,
-  Poppins_600SemiBold,
-  Poppins_300Light,
-  Poppins_700Bold,
-} from '@expo-google-fonts/poppins'
+  Inter_500Medium,
+  Inter_400Regular,
+  Inter_600SemiBold,
+  Inter_300Light,
+  Inter_700Bold,
+} from '@expo-google-fonts/inter'
 import { ClerkProvider, SignedIn, SignedOut } from '@clerk/clerk-expo'
 import SignInWithOAuth from './src/components/signInWithOAuth'
 import HomeScreen from './src/screens/App/HomeScreen'
@@ -18,11 +17,11 @@ import { NavigationContainer } from '@react-navigation/native'
 
 export default function App() {
   let [fontsLoaded, fontError] = useFonts({
-    Poppins_500Medium,
-    Poppins_400Regular,
-    Poppins_600SemiBold,
-    Poppins_700Bold,
-    Poppins_300Light,
+    Inter_500Medium,
+    Inter_400Regular,
+    Inter_600SemiBold,
+    Inter_700Bold,
+    Inter_300Light,
   })
 
   if (!fontsLoaded && !fontError) {
@@ -36,7 +35,6 @@ export default function App() {
       <SafeAreaView
         style={{
           backgroundColor: colorSheet.bgColor,
-          width: '100%',
           height: '100%',
         }}
       >

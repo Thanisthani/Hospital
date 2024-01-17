@@ -12,8 +12,7 @@ export const styles = StyleSheet.create({
   },
   heading: {
     fontSize: RFValue(20),
-    fontWeight: 'bold',
-    // fontFamily: 'Poppins_400Regular',
+    fontFamily: 'Inter_700Bold',
   },
   appImg: {
     height: hp(60),
@@ -38,6 +37,7 @@ export const styles = StyleSheet.create({
     fontSize: RFValue(15),
     textAlign: 'center',
     marginTop: hp(2),
+    fontFamily: 'Inter_400Regular',
   },
   btn: {
     alignItems: 'center',
@@ -50,5 +50,6 @@ export const styles = StyleSheet.create({
   btnText: {
     color: colorSheet.white,
     fontSize: RFValue(15),
+    fontFamily: 'Inter_400Regular',
   },
 })
