@@ -7,4 +7,5 @@ export const colorSheet = {
   secondary1: '#747384',
   secondary2: '#A8A3C1',
   secondary3: '#7056B2',
+  secondary4: '#C5BCEF',
 }

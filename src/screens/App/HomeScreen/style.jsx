@@ -19,7 +19,7 @@ export const styles = StyleSheet.create({
   },
   profilePic: {
     width: wp(13),
-    height: hp(6),
+    height: wp(13),
     borderRadius: 99,
   },
   greet: {
@@ -56,11 +56,72 @@ export const styles = StyleSheet.create({
   },
   sliderImg: {
     width: wp(90),
-    height: hp(25),
+    height: hp(22),
     borderRadius: 10,
     margin: 2.5,
   },
   sliderWrapper: {
     marginTop: hp(2),
+  },
+  // Category
+  iconWrapper: {
+    padding: 4,
+    alignItems: 'center',
+  },
+  iconImg: {
+    width: wp(10),
+    height: wp(10),
+
+    margin: 5,
+  },
+  iconContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  iconImgWrapper: {
+    backgroundColor: colorSheet.secondary4,
+    padding: 2,
+    borderRadius: 99,
+  },
+  iconHeader: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  iconHeading: {
+    fontFamily: 'Inter_600SemiBold',
+    fontSize: RFValue(15),
+    marginBottom: hp(1),
+  },
+  iconOther: {
+    fontFamily: 'Inter_400Regular',
+    fontSize: RFValue(13),
+    color: colorSheet.primary1,
+  },
+  premiumImg: {
+    width: '100%',
+    height: hp(16),
+    borderTopLeftRadius: 10,
+    borderTopRightRadius: 10,
+  },
+  premiumContainer: {
+    borderWidth: 0.6,
+    borderColor: colorSheet.secondary2,
+    borderRadius: 10,
+    width: wp(55),
+    margin: 5,
+  },
+  hospitalName: {
+    fontFamily: 'Inter_600SemiBold',
+    fontSize: RFValue(13),
+  },
+  hospitalAddress: {
+    fontFamily: 'Inter_400Regular',
+    fontSize: RFValue(11),
+  },
+  hospitalTextWrapper: {
+    paddingHorizontal: 10,
+    paddingVertical: 8,
   },
 })
