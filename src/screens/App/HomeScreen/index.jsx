@@ -6,6 +6,7 @@ import {
   TextInput,
   FlatList,
   ScrollView,
+  TouchableOpacity,
 } from 'react-native'
 import React, { useState } from 'react'
 import { useUser } from '@clerk/clerk-expo'
@@ -22,10 +23,12 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen'
+import { useNavigation } from '@react-navigation/native'
 
 export default function HomeScreen() {
   const { isLoaded, isSignedIn, user } = useUser()
 
+  const navigation = useNavigation()
   const [searchText, setSearchText] = useState()
   const [searchInput, setSearchInput] = useState()
 
@@ -38,7 +41,7 @@ export default function HomeScreen() {
       id: 1,
       name: 'Slider1',
       imageUrl:
-        'https://us.123rf.com/450wm/pitinan/pitinan1905/pitinan190500343/123561240-healthcare-profession-teamwork-and-doctor-service-concept-international-medical-staff-group-of.jpg?ver=6',
+        'https://muthumeenakshihospitals.com/img/heart-camp/MMH_Web-Banner.jpg',
     },
     {
       id: 2,
@@ -124,30 +127,61 @@ export default function HomeScreen() {
           </View>
 
           <View style={styles.iconContainer}>
-            <View style={styles.iconWrapper}>
+            <TouchableOpacity
+              onPress={() =>
+                navigation.navigate('Hosptial-Doctors-Screen', {
+                  catgoryName: 'Dentist',
+                })
+              }
+              style={styles.iconWrapper}
+            >
               <View style={styles.iconImgWrapper}>
                 <Image source={teeth} style={styles.iconImg} />
               </View>
               <Text>Dentist</Text>
-            </View>
-            <View style={styles.iconWrapper}>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              onPress={() =>
+                navigation.navigate('Hosptial-Doctors-Screen', {
+                  catgoryName: 'Cardiologist',
+                })
+              }
+              style={styles.iconWrapper}
+            >
               <View style={styles.iconImgWrapper}>
                 <Image source={heart} style={styles.iconImg} />
               </View>
               <Text>Cardiologist</Text>
-            </View>
-            <View style={styles.iconWrapper}>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              onPress={() =>
+                navigation.navigate('Hosptial-Doctors-Screen', {
+                  catgoryName: 'Neurologist',
+                })
+              }
+              style={styles.iconWrapper}
+            >
               <View style={styles.iconImgWrapper}>
                 <Image source={brain} style={styles.iconImg} />
               </View>
               <Text>Neurologist</Text>
-            </View>
-            <View style={styles.iconWrapper}>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              onPress={() =>
+                navigation.navigate('Hosptial-Doctors-Screen', {
+                  catgoryName: 'Onology',
+                })
+              }
+              style={styles.iconWrapper}
+            >
               <View style={styles.iconImgWrapper}>
                 <Image source={ear} style={styles.iconImg} />
               </View>
               <Text>Onology</Text>
-            </View>
+            </TouchableOpacity>
           </View>
         </View>
 
