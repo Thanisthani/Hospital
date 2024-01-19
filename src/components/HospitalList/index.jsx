@@ -1,18 +1,27 @@
-import { View, Text, FlatList, Image } from 'react-native'
+import { View, Text, FlatList, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { hospitalLists } from '../../constants'
 import { styles } from './style'
 import { Ionicons } from '@expo/vector-icons'
 import { RFValue } from 'react-native-responsive-fontsize'
 import { colorSheet } from '../../ColorSheet'
+import { useNavigation } from '@react-navigation/native'
 
 export default function HospitalList() {
+  const navigation = useNavigation()
   return (
     <View>
       <FlatList
         data={hospitalLists}
         renderItem={({ item }) => (
-          <View style={styles.card}>
+          <TouchableOpacity
+            onPress={() =>
+              navigation.navigate('Hospital-Detail-Screen', {
+                hospital: item,
+              })
+            }
+            style={styles.card}
+          >
             <Image source={{ uri: item.imageUrl }} style={styles.hospitalImg} />
             <View style={styles.nameWrapper}>
               <Text style={styles.name}>{item.name}</Text>
@@ -37,7 +46,7 @@ export default function HospitalList() {
               />
               <Text style={styles.subText}>{item.views} Views</Text>
             </View>
-          </View>
+          </TouchableOpacity>
         )}
       />
     </View>
