@@ -4,6 +4,7 @@ import HomeScreen from '../../screens/App/HomeScreen'
 import HospitalDoctorsListScreen from '../../screens/App/HospitalDoctorsListScreen.jsx'
 import { createStackNavigator } from '@react-navigation/stack'
 import HospitalDetailScreen from '../../screens/App/HospitalDetailScreen/index.jsx'
+import BookAppointmentScreen from '../../screens/App/BookAppointmentScreen/index.jsx'
 
 export default function HomeStack() {
   const Stack = createStackNavigator()
@@ -17,6 +18,10 @@ export default function HomeStack() {
       <Stack.Screen
         component={HospitalDetailScreen}
         name="Hospital-Detail-Screen"
+      />
+      <Stack.Screen
+        component={BookAppointmentScreen}
+        name="Book-Appointment-Screen"
       />
     </Stack.Navigator>
   )

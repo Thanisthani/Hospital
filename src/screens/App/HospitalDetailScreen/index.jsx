@@ -1,7 +1,7 @@
 import { View, Text, Image, FlatList, TouchableOpacity } from 'react-native'
 import React from 'react'
 import HeaderTitle from '../../../components/headerTitle'
-import { useRoute } from '@react-navigation/native'
+import { useRoute, useNavigation } from '@react-navigation/native'
 import { styles } from './style'
 import { contactList } from '../../../constants'
 import { FontAwesome } from '@expo/vector-icons'
@@ -11,6 +11,7 @@ import { RFValue } from 'react-native-responsive-fontsize'
 
 export default function HospitalDetailScreen() {
   const params = useRoute().params
+  const navigation = useNavigation()
   return (
     <View>
       <View style={styles.backArrow}>
@@ -40,6 +41,7 @@ export default function HospitalDetailScreen() {
           />
           <Text style={styles.subText}>Mon Sun | 11AM - 8PM</Text>
         </View>
+        {/* Contact details */}
         <FlatList
           data={contactList}
           numColumns={5}
@@ -69,7 +71,14 @@ export default function HospitalDetailScreen() {
         </View>
         <Text style={styles.aboutTxt}>{params.hospital.about}</Text>
         <View style={styles.btnWrapper}>
-          <TouchableOpacity style={styles.btn}>
+          <TouchableOpacity
+            style={styles.btn}
+            onPress={() => {
+              navigation.navigate('Book-Appointment-Screen', {
+                hospital: params.hospital,
+              })
+            }}
+          >
             <Text style={styles.btnTxt}>Book Appointment</Text>
           </TouchableOpacity>
         </View>
