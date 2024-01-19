@@ -30,7 +30,7 @@ export default function BottomTab() {
       }}
     >
       <Tab.Screen
-        name="Home"
+        name="HomeStack"
         component={HomeStack}
         options={{
           tabBarIcon: ({ color, size }) => (

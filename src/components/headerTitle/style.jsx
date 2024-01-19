@@ -4,6 +4,7 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen'
+import { colorSheet } from '../../ColorSheet'
 
 export const styles = StyleSheet.create({
   heading: {

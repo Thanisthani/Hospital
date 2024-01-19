@@ -24,6 +24,7 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen'
 import { useNavigation } from '@react-navigation/native'
+import { hospitalLists } from '../../../constants'
 
 export default function HomeScreen() {
   const { isLoaded, isSignedIn, user } = useUser()
@@ -51,22 +52,6 @@ export default function HomeScreen() {
     },
   ]
 
-  const premiumLists = [
-    {
-      id: 1,
-      name: 'Nawaloka Hospital',
-      address: 'No 20, Marine Road, Colombo 07.',
-      imageUrl:
-        'https://www.achn.net/globalassets/2022-new-site-photos/istock-987891546.jpg',
-    },
-    {
-      id: 2,
-      name: 'Nothern Hospital',
-      address: 'No 345, Palay Road, Thirunelveli, Jaffna.',
-      imageUrl:
-        'https://www.brookings.edu/wp-content/uploads/2017/05/hospital002.jpg',
-    },
-  ]
   return (
     <ScrollView>
       <View style={styles.container}>
@@ -192,7 +177,7 @@ export default function HomeScreen() {
             <Text style={styles.iconOther}>See All</Text>
           </View>
           <FlatList
-            data={premiumLists}
+            data={hospitalLists}
             horizontal={true}
             showsHorizontalScrollIndicator={false}
             renderItem={({ item, index }) => (
